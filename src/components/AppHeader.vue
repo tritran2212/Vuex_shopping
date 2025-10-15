@@ -10,7 +10,6 @@
         </div>
     </header>
 </template>
-
 <script>
 import { mapGetters, mapActions } from 'vuex';
 export default {
@@ -36,7 +35,6 @@ export default {
     },
 };
 </script>
-
 <style scoped>
 .app-header { 
     display: flex; 

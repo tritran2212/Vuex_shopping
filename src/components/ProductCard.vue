@@ -8,7 +8,6 @@
     <button @click="addToCart" class="add-to-cart-btn">Thêm vào giỏ</button>
   </div>
 </template>
-
 <script>
 export default {
   props: {
@@ -22,7 +21,6 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 .product-card { 
   border: 1px solid #ddd; 
