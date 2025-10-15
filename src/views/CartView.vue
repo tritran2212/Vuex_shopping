@@ -1,3 +1,4 @@
+
 <template>
   <div class="cart-page">
     <h1>Giỏ hàng của bạn</h1>
@@ -17,24 +18,52 @@
       </div>
       <div class="cart-summary">
         <h3>Tổng tiền: ${{ cartTotalPrice }}</h3>
-        <button @click="handleCheckout" class="checkout-btn">Thanh toán</button>
+        <button @click="openConfirmation" class="checkout-btn">Thanh toán</button>
       </div>
     </div>
+    <AppModal
+      :show="showConfirmModal"
+      title="Xác nhận thanh toán"
+      @close="cancelCheckout"
+    >
+      <p>Bạn có chắc chắn muốn thanh toán và hoàn tất đơn hàng này không?</p>
+      <template v-slot:footer>
+        <div class="confirmation-buttons">
+          <button @click="cancelCheckout" class="cancel-button">Hủy</button>
+          <button @click="confirmAndCheckout" class="confirm-button">Xác nhận</button>
+        </div>
+      </template>
+    </AppModal>
   </div>
 </template>
 <script>
 import { mapGetters, mapActions } from 'vuex';
-
+import AppModal from '@/components/AppModal.vue'; 
 export default {
   name: 'CartView',
+  components: {
+    AppModal,
+  },
+  data() {
+    return {
+      showConfirmModal: false,
+    };
+  },
   computed: {
     ...mapGetters('cart', ['cartItems', 'cartItemCount', 'cartTotalPrice']),
   },
   methods: {
     ...mapActions('cart', ['removeProductFromCart', 'checkout']),
-    async handleCheckout() {
+
+    openConfirmation() {
+      this.showConfirmModal = true;
+    },
+    cancelCheckout() {
+      this.showConfirmModal = false;
+    },
+    async confirmAndCheckout() {
       await this.checkout();
-      alert('Thanh toán thành công! Giỏ hàng của bạn đã được xóa.');
+      this.showConfirmModal = false;
       this.$router.push('/');
     },
   },
@@ -104,5 +133,26 @@ export default {
   font-size: 1.1em;
   border-radius: 5px;
   cursor: pointer;
+}
+.confirmation-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.cancel-button, .confirm-button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.cancel-button {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+}
+.confirm-button {
+  background-color: #42b983;
+  color: white;
 }
 </style>

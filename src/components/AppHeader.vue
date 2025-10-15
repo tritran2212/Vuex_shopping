@@ -3,7 +3,7 @@
         <div class="logo">Mini Shop</div>
         <nav>
             <router-link to="/">Trang chủ</router-link>
-            <router-link to="/cart">Gio Hang({{ cartItemCount }})</router-link>
+            <router-link to="/cart">Cart</router-link>
         </nav>
         <div class="search-bar">
             <input type="text" v-model="search" placeholder="Tìm Kiếm Sản Phẩm...">
