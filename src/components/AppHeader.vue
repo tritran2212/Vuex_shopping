@@ -35,30 +35,6 @@ export default {
     },
 };
 </script>
-<style scoped>
-.app-header { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 1rem 2rem; 
-    background: #fff; 
-    border-bottom: 1px solid #eee; 
-}
-.logo { 
-    font-weight: bold; 
-    font-size: 1.5rem; 
-}
-nav a { 
-    margin: 0 1rem; 
-    text-decoration: none; 
-    color: #333; 
-}
-nav a.router-link-exact-active { 
-    color: #42b983;
-}
-.search-bar input { 
-    padding: 0.5rem; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-}
+<style lang="scss">
+@import './AppHeader.scss'
 </style>

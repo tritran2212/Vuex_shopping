@@ -1,0 +1,91 @@
+
+.product-card {
+  background: #fff;
+  border-radius: $border-radius;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+}
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+  .add-to-cart-btn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+.product-image {
+  height: 140px;
+  max-width: 100%;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+.product-title {
+  font-size: 1rem;
+  font-weight: 600;
+  height: 3.2em;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+.product-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: $primary-color;
+  margin: 0.5rem 0;
+}
+.add-to-cart-btn {
+  background: $primary-color;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: bold;
+  width: 90%;
+  margin: 0.5rem auto 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  &:hover {
+    background: darken($primary-color, 8%);
+  }
+}
+.notification-popup {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 90%;
+  background-color: $primary-color;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  border-radius: 0 0 $border-radius $border-radius;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  p { margin: 0; }
+}
+.dropdown-fade-enter-active,
+.dropdown-fade-leave-active {
+  transition: all 0.4s ease-out;
+}
+.dropdown-fade-enter,
+.dropdown-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-100%);
+}

@@ -1,0 +1,10 @@
+@import 'variables';
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: $text-color;
+}
+
+.main-content {
+  padding: 0 2rem;
+}

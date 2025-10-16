@@ -34,58 +34,6 @@ export default {
   },
 };
 </script>
-<style scoped>
-.product-card {
-  border: 1px solid #ddd;
-  padding: 1rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden; 
-}
-.product-image {
-  height: 120px;
-  max-width: 100%; 
-  object-fit: contain;
-}
-.product-title {
-  font-size: 1rem;
-  height: 3em;
-  overflow: hidden;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-.add-to-cart-btn {
-  background: #42b983;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-}
-.notification-popup {
-  position: absolute;
-  top: 0;
-  left: 5%; 
-  width: 90%; 
-  background-color: #42b983; 
-  color: white;
-  padding: 12px;
-  text-align: center;
-  border-radius: 0 0 8px 8px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  z-index: 10; 
-}
-.notification-popup p {
-  margin: 0;
-}
-.dropdown-fade-enter-active, 
-.dropdown-fade-leave-active {
-  transition: all 0.4s ease-out; 
-}
-.dropdown-fade-enter, 
-.dropdown-fade-leave-to {
-  opacity: 0;
-  transform: translateY(-100%); 
-}
+<style lang="scss" scoped>
+@import './ProductCard.scss';
 </style>

@@ -1,0 +1,79 @@
+
+.product-detail-view {
+  max-width: 1000px; 
+  margin: 2rem auto; 
+  padding: 2rem;
+  background: #fff;
+  border-radius: $border-radius;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); 
+}
+
+.product-content {
+  display: grid;
+  grid-template-columns: 4fr 6fr; 
+  gap: 3rem; 
+  align-items: start; 
+}
+.product-image {
+  width: 100%; 
+  aspect-ratio: 1 / 1; 
+  object-fit: contain;
+  background-color: #f8f9fa;
+  border-radius: $border-radius;
+  padding: 1rem;
+  border: 1px solid $border-color;
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+.category {
+  display: inline-block;
+  background-color: lighten($primary-color, 40%);
+  color: darken($primary-color, 10%);
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+  align-self: flex-start;
+}
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: $primary-color;
+  margin-bottom: 1.5rem;
+}
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+.add-to-cart-btn {
+  background: $primary-color;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+  align-self: flex-start;
+  &:hover {
+    background: darken($primary-color, 8%);
+    // Hiệu ứng nhấc lên khi di chuột
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba($primary-color, 0.4);
+  }
+}

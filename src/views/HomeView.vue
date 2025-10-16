@@ -30,50 +30,6 @@ export default {
   },
 };
 </script>
-<style scoped>
-.home-view {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 2rem;
-  padding: 2rem;
-}
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
-.floating-cart-btn {
-  position: fixed;
-  bottom: 30%; 
-  right: 0;     
-  background-color: #42b983;
-  color: white;
-  padding: 12px 18px;
-  border-top-left-radius: 30px; 
-  border-bottom-left-radius: 30px; 
-  box-shadow: -3px 3px 12px rgba(0, 0, 0, 0.2);
-  text-decoration: none;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  gap: 8px; 
-  transition: transform 0.2s ease-in-out;
-}
-.floating-cart-btn:hover {
-  transform: translateX(-5px); 
-}
-.cart-icon {
-  font-size: 1.8rem; 
-}
-.cart-count {
-  background-color: #ff4d4d; 
-  border-radius: 50%; 
-  width: 26px;
-  height: 26px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.9rem;
-  font-weight: bold;
-}
+<style lang="scss" scoped>
+@import './HomeView.scss';
 </style>

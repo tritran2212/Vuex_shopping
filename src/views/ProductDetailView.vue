@@ -51,32 +51,6 @@ export default {
 };
 </script>
 
-<style scoped>
-.product-detail-view {
-  padding: 2rem;
-}
-.product-content {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 2rem;
-}
-.product-image {
-  max-width: 100%;
-}
-.category {
-  text-transform: capitalize;
-  color: #777;
-}
-.price {
-  font-size: 2rem;
-  font-weight: bold;
-}
-.add-to-cart-btn {
-  background: #42b983;
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  cursor: pointer;
-  font-size: 1rem;
-}
+<style lang="scss" scoped>
+  @import './ProductDetailView.scss';
 </style>
